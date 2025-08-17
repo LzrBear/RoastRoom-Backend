@@ -24,12 +24,9 @@ jobs:
 
       - name: Restore dependencies
         run: dotnet restore ./RoastRoom.sln
-        working-directory: RoastRoom-Backend
 
       - name: Build
         run: dotnet build ./RoastRoom.sln --configuration Release --no-restore
-        working-directory: RoastRoom-Backend
 
       - name: Test
         run: dotnet test ./RoastRoom.sln --no-build --verbosity normal
-        working-directory: RoastRoom-Backend
