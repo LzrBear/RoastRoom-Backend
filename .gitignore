@@ -1,0 +1,47 @@
+# .gitignore for RoastRoom-Backend (ASP.NET Core)
+
+# Build and publish folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Logs
+*.log
+
+# Database
+*.mdf
+*.ldf
+
+# Environment files
+.env
+
+# Others
+_ReSharper*/
+*.resharper
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Backup & temp files
+*.bak
+*.tmp
+~$*
+
+# Publish Web Output
+wwwroot/
