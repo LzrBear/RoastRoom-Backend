@@ -1,0 +1,35 @@
+name: Backend Build
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore ./RoastRoom.sln
+        working-directory: RoastRoom-Backend
+
+      - name: Build
+        run: dotnet build ./RoastRoom.sln --configuration Release --no-restore
+        working-directory: RoastRoom-Backend
+
+      - name: Test
+        run: dotnet test ./RoastRoom.sln --no-build --verbosity normal
+        working-directory: RoastRoom-Backend
