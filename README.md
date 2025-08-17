@@ -1,5 +1,7 @@
 # RoastRoom-Backend
 
+![Backend Build](https://github.com/LzrBear/RoastRoom-Backend/actions/workflows/backend-build.yml/badge.svg?branch=master)
+
 This is the backend for RoastRoom, built with ASP.NET Core Web API and Entity Framework Core.
 
 ## Getting Started
