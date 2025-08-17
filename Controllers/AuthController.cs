@@ -1,6 +1,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 using RoastRoomBackend.Models;
+using Microsoft.AspNetCore.Identity;
 
 [ApiController]
 [Route("api/auth")]
